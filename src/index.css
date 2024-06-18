@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-custom {
+  background-image: url('./assets/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes slide-in {
+  0%, 16.66% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  33.33%, 50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50%, 66.66% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  83.33%, 100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes image-1-animation {
+  0%, 16.66% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  33.33% {
+    opacity: 0;
+    transform: translate(-150%, -150%);
+  }
+}
+
+@keyframes image-2-animation {
+  33.33%, 50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  66.66% {
+    opacity: 0;
+    transform: translate(150%, -150%);
+  }
+}
+
+@keyframes image-3-animation {
+  66.66%, 83.33% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 18s linear infinite;
+}
+
+.animate-image-1 {
+  animation: image-1-animation 18s linear infinite;
+}
+
+.animate-image-2 {
+  animation: image-2-animation 18s linear infinite;
+}
+
+.animate-image-3 {
+  animation: image-3-animation 18s linear infinite;
+}
